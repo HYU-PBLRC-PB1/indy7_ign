@@ -16,6 +16,9 @@
             <uri>model://indy7/meshes/visual/link0.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>                            
+        </material>
       </visual>
       <collision name="indy7_link0_collision">
         <geometry>
@@ -55,6 +58,9 @@
             <uri>model://indy7/meshes/visual/link1.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>                            
+        </material>
       </visual>
       <collision name="indy7_link1_collision">
         <geometry>
@@ -94,6 +100,9 @@
             <uri>model://indy7/meshes/visual/link2.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>                            
+        </material>
       </visual>
       <collision name="indy7_link2_collision">
         <geometry>
@@ -133,6 +142,9 @@
             <uri>model://indy7/meshes/visual/link3.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>                            
+        </material>
       </visual>
       <collision name="indy7_link3_collision">
         <geometry>
@@ -172,6 +184,9 @@
             <uri>model://indy7/meshes/visual/link4.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>                            
+        </material>
       </visual>
       <collision name="indy7_link4_collision">
         <geometry>
@@ -211,6 +226,9 @@
             <uri>model://indy7/meshes/visual/link5.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>                            
+        </material>
       </visual>
       <collision name="indy7_link5_collision">
         <geometry>
@@ -250,6 +268,9 @@
             <uri>model://indy7/meshes/visual/link6.stl</uri>
           </mesh>
         </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>                            
+        </material>
       </visual>
       <collision name="indy7_link6_collision">
         <geometry>
