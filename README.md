@@ -9,6 +9,13 @@ The coordinate system and location of each link in indy7 are as follows.
 ![example2](figure/robot_model.png)
 
 # Install & Build
+
+If you have not installed the 'joint-state-publisher-gui' package, run the following command to install the joint-state-publisher-gui package.
+
+```bash
+sudo apt-get install ros-foxy-joint-state-publisher-gui
+```
+
 The following commands download a package from a remote repository and install it in your colcon workspace.
 
 ```bash
@@ -28,13 +35,7 @@ You can check the posture of indy7 by directly entering each joint angle value o
 ![example1](figure/joint_state_publisher_gui.png)
 (* If you want to check the coordinate system of a specific link as shown in the picture, activate the Show Axes option in rviz2.)
 
-## Error 
-If there is an error that the 'joint-state-publisher-gui' package cannot be found, 
-run the following command to install the joint-state-publisher-gui package and try again.
-```bash
-sudo apt-get install ros-foxy-joint-state-publisher-gui
-ros2 launch indy7_ign indy7_display.launch.py
-```
+
 
 # Package Structure
 If you want to check the file structure of a package, run the following command.
