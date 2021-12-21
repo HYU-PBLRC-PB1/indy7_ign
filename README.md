@@ -1,44 +1,43 @@
 # indy7_ign
-ROS2 및 Ignition Gazebo 환경에서 indy7을 불러들이기 위한 model 파일(urdf, sdf)을 포함하고 있습니다.
+This package contains model files (urdf, sdf) for loading indy7 in ROS2 and Ignition Gazebo environments.
 
 <!--
 ![indy7](indy7/thumbnails/1.png)
 -->
-indy7의 각 link의 좌표계 및 위치는 다음 그림과 같습니다.
+The coordinate system and location of each link in indy7 are as follows.
 
 ![example2](figure/robot_model.png)
 
-# 설치 및 확인
-다음의 명령어를 통해 원격 저장소로부터 package를 내려받아 자신의 colcon workspace에 설치합니다.
+# Install & Build
+The following commands download a package from a remote repository and install it in your colcon workspace.
 
 ```bash
-mkdir -p ~/robot_ws/src # colcon workspace가 없을 경우만 수행합니다.
+mkdir -p ~/robot_ws/src # Make colcon workespace directory. If colcon workspace does not exist, run this command.
 cd ~/robot_ws/src
-git clone https://github.com/HYU-PBLRC-PB1/indy7_ign.git # 원격 저장소로부터 package를 다운로드합니다.
-cd ~/robot_ws && colcon build --symlink-install # colcon workspace에서 빌드를 진행합니다.
+git clone https://github.com/HYU-PBLRC-PB1/indy7_ign.git # Download the package from the remote repository.
+cd ~/robot_ws && colcon build --symlink-install # Build colcon workspace.
 ```
 
-# 예제
-indy7의 configuration을 확인하기 위해 'joint_state_publisher_gui' node를 이용하는 예제에 해당합니다.
+# Example
+This is an example of using the 'joint_state_publisher_gui' node to check the configuration of indy7.
 ```bash
 source ~/robot_ws/install/setup.bash
 ros2 launch indy7_ign indy7_display.launch.py
 ```
-각 joint angle 값을 직접 기록하거나 슬라이더를 이동시키면서 indy7 자세의 변화를 확인할 수 있습니다.
-
+You can check the posture of indy7 by directly entering each joint angle value or using the slider.
 ![example1](figure/joint_state_publisher_gui.png)
-(* 그림과 같이 특정 link의 좌표계를 확인하고 싶은 경우 rviz2상에서 Show Axes 옵션을 활성화 합니다.)
+(* If you want to check the coordinate system of a specific link as shown in the picture, activate the Show Axes option in rviz2.)
 
-## 오류 관련
-만약 'joint-state-publisher-gui' 패키지를 찾을 수 없다는 오류가 발생한 경우 다음의 명령어를 실행한 뒤 다시 시도합니다.
+## Error 
+If there is an error that the 'joint-state-publisher-gui' package cannot be found, 
+run the following command to install the joint-state-publisher-gui package and try again.
 ```bash
-# joint-state-publisher-gui 패키지가 설치되어있지 않은 경우
 sudo apt-get install ros-foxy-joint-state-publisher-gui
 ros2 launch indy7_ign indy7_display.launch.py
 ```
 
-# 패키지 구조
-원격 저장소로부터 내려받은 패키지의 파일 구조를 확인하기 위해 다음의 명령어를 수행합니다.
+# Package Structure
+If you want to check the file structure of a package, run the following command.
 ```bash
 cd ~/robot_ws/src/indy7_ign
 tree
